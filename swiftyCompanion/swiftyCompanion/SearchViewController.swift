@@ -16,7 +16,7 @@ class SearchViewController: UIViewController, HandleAccesToken {
     
     
     @IBAction func searchLoginAction(_ sender: UIButton) {
-        guard let login = self.searchLoginTextField.text else {
+        guard let login = self.searchLoginTextField.text, login != "" else {
             return
         }
         
@@ -52,7 +52,15 @@ class SearchViewController: UIViewController, HandleAccesToken {
     func displayServerError() {
         let alertController = UIAlertController(title: "Error", message: "Can't get 'access token' from server", preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel))
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func displayNoResultError(login: String) {
+        let alertController = UIAlertController(title: "Error", message: "No result for login : '\(login)'", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel))
         
         self.present(alertController, animated: true, completion: nil)
     }

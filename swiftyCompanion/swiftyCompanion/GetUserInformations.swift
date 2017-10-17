@@ -36,10 +36,8 @@ class GetUserInformations {
         Alamofire.request(Constants.api + users, parameters: parameters, headers: headers).responseJSON { response in
             if let result = response.result.value {
                 let json = JSON(result)
-                if let id = json[0]["id"].int {
-                    print("id = \(id)")
-                    self.getUserInformations(id: id)
-                }
+                if let id = json[0]["id"].int { self.getUserInformations(id: id) }
+                else { self.delegate?.displayNoResultError(login: login) }
             }
             if let code = response.response?.statusCode, code != 200 {
                 print("CODE = \(code)")
