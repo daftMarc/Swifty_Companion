@@ -13,7 +13,7 @@ import SwiftyJSON
 class GetAccessToken {
     
     
-    var delegate: SearchViewController?
+    var delegate: SearchViewController!
     var login: String?
     
     
@@ -38,9 +38,7 @@ class GetAccessToken {
                 let json = JSON(result)
                 if let accessToken = json["access_token"].string {
                     UserDefaults.standard.set(accessToken, forKey: Constants.accessToken)
-                    if self.login != nil {
-                        // call other API
-                    }
+                    if self.login != nil { _ = GetUserInformations(delegate: self.delegate, login: self.login!) }
                 }
             }
             if let code = response.response?.statusCode, code != 200 {
