@@ -15,12 +15,33 @@ protocol HandleAccesToken {
 class SearchViewController: UIViewController, HandleAccesToken {
     
     
+    @IBAction func searchLoginAction(_ sender: UIButton) {
+        guard let login = self.searchLoginTextField.text else {
+            return
+        }
+        
+        if UserDefaults.standard.value(forKey: Constants.accessToken) == nil {
+            _ = GetAccessToken.init(delegate: self, login: login)
+        } else {
+            _ = GetUserInformations(delegate: self, login: login)
+        }
+    }
+    
+    
+    @IBOutlet weak var searchLoginTextField: UITextField!
+    @IBOutlet weak var searchLoginButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if UserDefaults.standard.value(forKey: Constants.accessToken) == nil {
-            _ = getAccessToken.init(delegate: self)
+            _ = GetAccessToken.init(delegate: self, login: nil)
         }
+        
+        // Set corner radius for text field and button
+        self.searchLoginTextField.layer.cornerRadius = 15
+        self.searchLoginButton.layer.cornerRadius = 15
     }
     
     

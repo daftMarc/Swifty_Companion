@@ -8,15 +8,18 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
-class getAccessToken {
+class GetAccessToken {
     
     
     var delegate: SearchViewController?
+    var login: String?
     
     
-    init(delegate: SearchViewController) {
+    init(delegate: SearchViewController, login: String?) {
         self.delegate = delegate
+        self.login = login
         
         self.getAccessToken()
     }
@@ -32,12 +35,15 @@ class getAccessToken {
         
         Alamofire.request(Constants.api + oauth, method: .post, parameters: parameters).responseJSON { response in
             if let result = response.result.value {
-                let json = result as! NSDictionary
-                if let accessToken = json["access_token"] as? String {
+                let json = JSON(result)
+                if let accessToken = json["access_token"].string {
                     UserDefaults.standard.set(accessToken, forKey: Constants.accessToken)
+                    if self.login != nil {
+                        // call other API
+                    }
                 }
             }
-            if let data = response.response?.statusCode, data != 200 {
+            if let code = response.response?.statusCode, code != 200 {
                 self.delegate?.displayServerError()
             }
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
