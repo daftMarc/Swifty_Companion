@@ -14,6 +14,5 @@ struct Constants {
     static let secret = "497da2ad6bffcd3429fb2c0d909749443670b34cc96adedce8f970d64bb5ad64"
     static let api = "https://api.intra.42.fr/"
     static let accessToken = "Access Token"
-    static var accessToken: String?
     
 }

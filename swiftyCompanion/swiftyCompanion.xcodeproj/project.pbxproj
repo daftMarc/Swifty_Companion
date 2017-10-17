@@ -10,8 +10,8 @@
 		1C594A911840C7948EDEF18F /* Pods_swiftyCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74BF87F0262CF684EF6A4F /* Pods_swiftyCompanion.framework */; };
 		B45B2EED1F961CF800B0CC73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B2EEC1F961CF800B0CC73 /* Constants.swift */; };
 		B45B2EF01F961EF100B0CC73 /* GetAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B2EEF1F961EF100B0CC73 /* GetAccessToken.swift */; };
+		B474F77D1F9633F400243560 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B474F77C1F9633F400243560 /* SearchViewController.swift */; };
 		B48D68A61F94DF2500F4A86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D68A51F94DF2500F4A86C /* AppDelegate.swift */; };
-		B48D68A81F94DF2500F4A86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D68A71F94DF2500F4A86C /* ViewController.swift */; };
 		B48D68AB1F94DF2500F4A86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48D68A91F94DF2500F4A86C /* Main.storyboard */; };
 		B48D68AD1F94DF2500F4A86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48D68AC1F94DF2500F4A86C /* Assets.xcassets */; };
 		B48D68B01F94DF2500F4A86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48D68AE1F94DF2500F4A86C /* LaunchScreen.storyboard */; };
@@ -22,9 +22,9 @@
 		A1C4C9D484EA9DF6C67147F9 /* Pods-swiftyCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftyCompanion.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftyCompanion/Pods-swiftyCompanion.release.xcconfig"; sourceTree = "<group>"; };
 		B45B2EEC1F961CF800B0CC73 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B45B2EEF1F961EF100B0CC73 /* GetAccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAccessToken.swift; sourceTree = "<group>"; };
+		B474F77C1F9633F400243560 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B48D68A21F94DF2500F4A86C /* swiftyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48D68A51F94DF2500F4A86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B48D68A71F94DF2500F4A86C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B48D68AA1F94DF2500F4A86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B48D68AC1F94DF2500F4A86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48D68AF1F94DF2500F4A86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B48D68A51F94DF2500F4A86C /* AppDelegate.swift */,
-				B48D68A71F94DF2500F4A86C /* ViewController.swift */,
+				B474F77C1F9633F400243560 /* SearchViewController.swift */,
 				B45B2EEC1F961CF800B0CC73 /* Constants.swift */,
 				B45B2EEE1F961EDD00B0CC73 /* API */,
 				B48D68A91F94DF2500F4A86C /* Main.storyboard */,
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B48D68A81F94DF2500F4A86C /* ViewController.swift in Sources */,
+				B474F77D1F9633F400243560 /* SearchViewController.swift in Sources */,
 				B48D68A61F94DF2500F4A86C /* AppDelegate.swift in Sources */,
 				B45B2EF01F961EF100B0CC73 /* GetAccessToken.swift in Sources */,
 				B45B2EED1F961CF800B0CC73 /* Constants.swift in Sources */,
