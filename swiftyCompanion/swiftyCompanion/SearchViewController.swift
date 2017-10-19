@@ -16,10 +16,11 @@ class SearchViewController: UIViewController, HandleAccesToken {
     
     
     @IBAction func searchLoginAction(_ sender: UIButton) {
-        guard let login = self.searchLoginTextField.text, login != "" else {
+        guard var login = self.searchLoginTextField.text, login != "" else {
             return
         }
         
+        login = login.trimmingCharacters(in: .whitespacesAndNewlines)
         if UserDefaults.standard.value(forKey: Constants.accessToken) == nil {
             _ = GetAccessToken.init(delegate: self, login: login)
         } else {
