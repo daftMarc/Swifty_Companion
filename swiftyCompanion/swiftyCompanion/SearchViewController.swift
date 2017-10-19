@@ -16,7 +16,9 @@ class SearchViewController: UIViewController, HandleAccesToken {
     
     
     @IBAction func searchLoginAction(_ sender: UIButton) {
+        self.searchLoginButton.isEnabled = false
         guard var login = self.searchLoginTextField.text, login != "" else {
+            self.searchLoginButton.isEnabled = true
             return
         }
         
@@ -57,6 +59,7 @@ class SearchViewController: UIViewController, HandleAccesToken {
     // MARK: - HandleAccesToken delegate
     
     func displayServerError() {
+        self.searchLoginButton.isEnabled = true
         let alertController = UIAlertController(title: "Error", message: "Can't get 'access token' from server", preferredStyle: UIAlertControllerStyle.alert)
         
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel))
@@ -65,6 +68,7 @@ class SearchViewController: UIViewController, HandleAccesToken {
     }
     
     func displayNoResultError(login: String) {
+        self.searchLoginButton.isEnabled = true
         let alertController = UIAlertController(title: "Error", message: "No result for login : '\(login)'", preferredStyle: UIAlertControllerStyle.alert)
         
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel))
@@ -78,6 +82,7 @@ class SearchViewController: UIViewController, HandleAccesToken {
     // MARK: - NAVIGATION
     
     func prepareForScrollView() {
+        self.searchLoginButton.isEnabled = true
         let destinationvc = storyboard?.instantiateViewController(withIdentifier: "User Informations") as! UserInformationsViewController
         
         destinationvc.user = self.user
