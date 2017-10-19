@@ -100,12 +100,12 @@ class GetUserInformations {
         if let level = json["cursus_users"][0]["level"].double { user.level = level }
         if let image = json["image_url"].string { user.image = image }
         
-        user.projects = [(String, Int)]()
+        user.projects = [(String, String, Int)]()
         if let projects = json["projects_users"].array {
             for element in projects {
                 if let status = element["status"].string, status == "finished" {
-                    if let name = element["project"]["name"].string, let finalMark = element["final_mark"].int {
-                        user.projects?.append((name, finalMark))
+                    if let name = element["project"]["name"].string, let slug = element["project"]["slug"].string, let finalMark = element["final_mark"].int {
+                        user.projects?.append((name, slug, finalMark))
                     }
                 }
             }
