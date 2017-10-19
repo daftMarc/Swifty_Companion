@@ -21,6 +21,7 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var skillsTableView: UITableView!
+    @IBOutlet weak var projectsTableView: UITableView!
     
     var user: User!
     
@@ -46,9 +47,15 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
             self.userImage.layer.masksToBounds = true
         }
         
+        // Set skillsTableView
         self.skillsTableView.rowHeight = 45
         self.skillsTableView.estimatedRowHeight = self.skillsTableView.rowHeight
         self.skillsTableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Set projectsTableView
+        self.projectsTableView.rowHeight = 45
+        self.projectsTableView.estimatedRowHeight = self.projectsTableView.rowHeight
+        self.projectsTableView.rowHeight = UITableViewAutomaticDimension
     }
     
     
@@ -60,7 +67,7 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
         if tableView == self.skillsTableView {
             return self.user.skills?.count ?? 0
         }
-        return 0
+        return self.user.projects?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +78,12 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
         
             return cell
         }
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectsCell", for: indexPath) as! ProjectsTableViewCell
+        
+        cell.projects = self.user.projects?[indexPath.row]
+        
+        return cell
     }
     
 }

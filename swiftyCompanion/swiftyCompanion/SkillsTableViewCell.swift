@@ -25,7 +25,7 @@ class SkillsTableViewCell: UITableViewCell {
         self.nameLabel.text = ""
         self.progressView.progress = 0
         
-        if let skill = skills {
+        if let skill = self.skills {
             self.nameLabel.text = "\(skills?.0 ?? "can't get data") - level \(String(skill.1))"
             self.progressView.progress = Float(skill.1.truncatingRemainder(dividingBy: 1))
         }
