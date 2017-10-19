@@ -31,6 +31,12 @@ class SearchViewController: UIViewController, HandleAccesToken {
     @IBOutlet weak var searchLoginTextField: UITextField!
     @IBOutlet weak var searchLoginButton: UIButton!
     
+    var user: User? {
+        didSet {
+            self.prepareForScrollView()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,4 +71,14 @@ class SearchViewController: UIViewController, HandleAccesToken {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    
+    
+    
+    // MARK: - NAVIGATION
+    
+    func prepareForScrollView() {
+        let destinationvc = storyboard?.instantiateViewController(withIdentifier: "User Informations") as! UserInformationsViewController
+        
+        self.navigationController?.pushViewController(destinationvc, animated: true)
+    }
 }

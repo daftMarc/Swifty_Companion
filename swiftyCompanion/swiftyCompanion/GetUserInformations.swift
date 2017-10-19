@@ -123,6 +123,9 @@ class GetUserInformations {
         }
         
         print(user)
+        DispatchQueue.main.async {
+            self.delegate?.user = user
+        }
     }
     
 }
