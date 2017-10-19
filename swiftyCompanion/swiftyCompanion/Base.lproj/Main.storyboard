@@ -191,38 +191,40 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-Wd-bG7">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-Wd-bG7">
                                                         <rect key="frame" x="0.0" y="295" width="320" height="210"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="210" id="whC-5h-5VJ"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="skillsCell" rowHeight="25" id="smj-rk-Zrg" customClass="SkillsTableViewCell" customModule="swiftyCompanion" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="320" height="25"/>
+                                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="skillsCell" rowHeight="71" id="smj-rk-Zrg" customClass="SkillsTableViewCell" customModule="swiftyCompanion" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28" width="320" height="71"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="smj-rk-Zrg" id="Ab1-61-ZmY">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="24.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZQm-tn-WZH">
-                                                                            <rect key="frame" x="8" y="8" width="304" height="32.5"/>
+                                                                            <rect key="frame" x="8" y="8" width="304" height="54.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-PY-7Fx">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="39.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vmo-la-v4N">
-                                                                                    <rect key="frame" x="0.0" y="30.5" width="304" height="2"/>
+                                                                                    <rect key="frame" x="0.0" y="49.5" width="304" height="5"/>
                                                                                     <color key="tintColor" red="0.30196078430000001" green="0.81176470590000005" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="5" id="bFk-B8-jOo"/>
+                                                                                    </constraints>
                                                                                 </progressView>
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="nrQ-PY-7Fx" firstAttribute="height" secondItem="Ab1-61-ZmY" secondAttribute="height" multiplier="0.6" id="0a3-gD-Xca"/>
                                                                         <constraint firstItem="ZQm-tn-WZH" firstAttribute="top" secondItem="Ab1-61-ZmY" secondAttribute="topMargin" id="9UF-tB-Jgb"/>
                                                                         <constraint firstItem="ZQm-tn-WZH" firstAttribute="leading" secondItem="Ab1-61-ZmY" secondAttribute="leadingMargin" id="CYA-B4-RWq"/>
                                                                         <constraint firstAttribute="bottomMargin" secondItem="ZQm-tn-WZH" secondAttribute="bottom" id="ZcU-W2-jT2"/>

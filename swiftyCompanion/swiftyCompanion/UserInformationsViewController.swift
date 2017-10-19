@@ -46,7 +46,8 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
             self.userImage.layer.masksToBounds = true
         }
         
-        self.skillsTableView.estimatedRowHeight = 25
+        self.skillsTableView.rowHeight = 45
+        self.skillsTableView.estimatedRowHeight = self.skillsTableView.rowHeight
         self.skillsTableView.rowHeight = UITableViewAutomaticDimension
     }
     
