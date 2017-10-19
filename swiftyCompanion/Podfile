@@ -8,5 +8,6 @@ target 'swiftyCompanion' do
   # Pods for swiftyCompanion
 	pod 'Alamofire', '~> 4.5'
 	pod 'SwiftyJSON'
+	pod 'SDWebImage'
 
 end

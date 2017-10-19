@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="40.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltK-Bh-c8l">
                                         <rect key="frame" x="0.0" y="50.5" width="230" height="39.5"/>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
-        <!--User Informations View Controller-->
+        <!--Profile-->
         <scene sceneID="N1S-Hn-qLl">
             <objects>
                 <viewController storyboardIdentifier="User Informations" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0u0-BK-XFI" customClass="UserInformationsViewController" customModule="swiftyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.85988678333117874" green="0.85988678333117874" blue="0.85988678333117874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0R0-g8-Xmp" secondAttribute="trailing" id="FST-6v-m7Y"/>
                                             <constraint firstItem="0R0-g8-Xmp" firstAttribute="leading" secondItem="NBo-Ed-vvi" secondAttribute="leading" id="S6l-GF-Hxg"/>
@@ -240,9 +240,20 @@
                             <constraint firstItem="1yh-YW-ewS" firstAttribute="leading" secondItem="oie-PC-IjT" secondAttribute="leading" id="zzs-Pu-JOf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile" id="gk2-L4-oWT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1210"/>
+                    <connections>
+                        <outlet property="correctionPointLabel" destination="gi5-od-wDj" id="ux8-ha-fMI"/>
+                        <outlet property="levelLabel" destination="e0J-2Y-oeS" id="gMW-jH-GNd"/>
+                        <outlet property="loginLabel" destination="cln-fr-2wH" id="2gX-SG-mmU"/>
+                        <outlet property="nameLabel" destination="mYW-a6-bde" id="KJW-nb-8i8"/>
+                        <outlet property="phoneNumberLabel" destination="4vG-7w-72d" id="f6k-cP-43w"/>
+                        <outlet property="progressView" destination="VQx-cL-PaK" id="pkR-rS-MLK"/>
+                        <outlet property="userImage" destination="Xuo-oJ-9Ud" id="tSC-L0-wVr"/>
+                        <outlet property="walletLabel" destination="Hlr-h1-QEi" id="Itz-f2-war"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epZ-dJ-90x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

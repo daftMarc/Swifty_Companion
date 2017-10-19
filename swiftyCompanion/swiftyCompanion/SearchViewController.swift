@@ -79,6 +79,8 @@ class SearchViewController: UIViewController, HandleAccesToken {
     func prepareForScrollView() {
         let destinationvc = storyboard?.instantiateViewController(withIdentifier: "User Informations") as! UserInformationsViewController
         
+        destinationvc.user = self.user
+        
         self.navigationController?.pushViewController(destinationvc, animated: true)
     }
 }
