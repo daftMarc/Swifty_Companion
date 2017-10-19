@@ -18,11 +18,11 @@ struct User: CustomStringConvertible {
     var correctionPoint: Int?
     var level: Double?
     var image: String?
-    var skills: [[String: Any]]?
-    var projects: [[String: Any]]?
+    var skills: [(String, Double)]?
+    var projects: [(String, Int)]?
     
     var description: String {
-        return ("first name = \(self.firstName)\nlast name = \(self.lastName)\nlogin = \(self.login)\nphone = \(self.phone)\nwallet = \(self.wallet)\ncorrection point = \(self.correctionPoint)\nlevel = \(self.level)\nimage = \(self.image)")
+        return ("first name = \(String(describing: self.firstName))\nlast name = \(String(describing: self.lastName))\nlogin = \(String(describing: self.login))\nphone = \(String(describing: self.phone))\nwallet = \(String(describing: self.wallet))\ncorrection point = \(String(describing: self.correctionPoint))\nlevel = \(String(describing: self.level))\nimage = \(String(describing: self.image))\nprojets = \(String(describing: self.projects)))\nskills = \(String(describing: self.skills))")
     }
     
 }
