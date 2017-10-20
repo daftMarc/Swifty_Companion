@@ -99,8 +99,13 @@ class GetUserInformations {
         if let phone = json["phone"].string { user.phone = phone }
         if let wallet = json["wallet"].int { user.wallet = wallet }
         if let correctionPoint = json["correction_point"].int { user.correctionPoint = correctionPoint }
-        if let level = json["cursus_users"][0]["level"].double { user.level = level }
         if let image = json["image_url"].string { user.image = image }
+        
+        if let cursusUsers = json["cursus_users"].array {
+            for cursus in cursusUsers {
+                if cursus["cursus_id"].int == 1, let level = cursus["level"].double { user.level = level }
+            }
+        }
         
         user.projects = [(String, String, Int)]()
         if let projects = json["projects_users"].array {

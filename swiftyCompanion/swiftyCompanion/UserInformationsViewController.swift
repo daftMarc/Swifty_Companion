@@ -51,11 +51,13 @@ class UserInformationsViewController: UIViewController, UITableViewDelegate, UIT
         self.skillsTableView.rowHeight = 45
         self.skillsTableView.estimatedRowHeight = self.skillsTableView.rowHeight
         self.skillsTableView.rowHeight = UITableViewAutomaticDimension
+        self.skillsTableView.tableFooterView = UIView()
         
         // Set projectsTableView
         self.projectsTableView.rowHeight = 45
         self.projectsTableView.estimatedRowHeight = self.projectsTableView.rowHeight
         self.projectsTableView.rowHeight = UITableViewAutomaticDimension
+        self.projectsTableView.tableFooterView = UIView()
     }
     
     
