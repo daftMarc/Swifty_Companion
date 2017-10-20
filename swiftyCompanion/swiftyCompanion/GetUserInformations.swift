@@ -28,7 +28,7 @@ class GetUserInformations {
         let parameters: Parameters = ["filter[login]": login]
         guard let bearer = UserDefaults.standard.value(forKey: Constants.accessToken) as? String else {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            _ = GetAccessToken(delegate: SearchViewController(), login: login)
+            if let deleg = self.delegate { _ = GetAccessToken(delegate: deleg, login: login) }
             return
         }
         let headers = ["Authorization": "Bearer \(bearer)"]
@@ -42,7 +42,7 @@ class GetUserInformations {
                     // Token is expired
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     UserDefaults.standard.set(nil, forKey: Constants.accessToken)
-                    _ = GetAccessToken(delegate: SearchViewController(), login: login)
+                    if let deleg = self.delegate { _ = GetAccessToken(delegate: deleg, login: login) }
                     return
                 default:
                     DispatchQueue.main.async { self.delegate?.displayServerError() }
@@ -63,7 +63,7 @@ class GetUserInformations {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         guard let bearer = UserDefaults.standard.value(forKey: Constants.accessToken) as? String else {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            _ = GetAccessToken(delegate: SearchViewController(), login: login)
+            if let deleg = self.delegate { _ = GetAccessToken(delegate: deleg, login: login) }
             return
         }
         let headers = ["Authorization": "Bearer \(bearer)"]
@@ -80,7 +80,7 @@ class GetUserInformations {
                 case 401:
                     // Token is expired
                     UserDefaults.standard.set(nil, forKey: Constants.accessToken)
-                    _ = GetAccessToken(delegate: SearchViewController(), login: login)
+                    if let deleg = self.delegate { _ = GetAccessToken(delegate: deleg, login: login) }
                 default:
                     DispatchQueue.main.async { self.delegate?.displayServerError() }
                 }

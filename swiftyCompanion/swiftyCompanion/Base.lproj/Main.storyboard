@@ -30,13 +30,13 @@
                                 <rect key="frame" x="45" y="189" width="230" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-fi-Eu7">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="40.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="41"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltK-Bh-c8l">
-                                        <rect key="frame" x="0.0" y="50.5" width="230" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="51" width="230" height="39"/>
                                         <color key="backgroundColor" red="0.30196078431372547" green="0.81176470588235294" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Search Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epZ-dJ-90x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.25" y="123.59154929577466"/>
+            <point key="canvasLocation" x="1862" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="diC-9l-ArB">
