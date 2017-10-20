@@ -17,12 +17,17 @@ class SearchViewController: UIViewController, HandleAccesToken {
     
     @IBAction func searchLoginAction(_ sender: UIButton) {
         self.searchLoginButton.isEnabled = false
-        guard var login = self.searchLoginTextField.text, login != "" else {
+        guard var login = self.searchLoginTextField.text else {
             self.searchLoginButton.isEnabled = true
             return
         }
         
         login = login.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard login != "" else {
+            self.searchLoginButton.isEnabled = true
+            return
+        }
+
         if UserDefaults.standard.value(forKey: Constants.accessToken) == nil {
             _ = GetAccessToken.init(delegate: self, login: login)
         } else {

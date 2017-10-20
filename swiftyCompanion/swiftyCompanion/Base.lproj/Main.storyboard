@@ -89,10 +89,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="776"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBo-Ed-vvi" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="775"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="855"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-g8-Xmp">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="775"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="855"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-t0-skg">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
@@ -192,10 +192,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-Wd-bG7">
-                                                        <rect key="frame" x="16" y="295" width="288" height="210"/>
+                                                        <rect key="frame" x="16" y="295" width="288" height="250"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="210" id="whC-5h-5VJ"/>
+                                                            <constraint firstAttribute="height" constant="250" id="whC-5h-5VJ"/>
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="skillsCell" rowHeight="60" id="smj-rk-Zrg" customClass="SkillsTableViewCell" customModule="swiftyCompanion" customModuleProvider="target">
@@ -243,13 +243,13 @@
                                                         </connections>
                                                     </tableView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOd-Ya-FvE">
-                                                        <rect key="frame" x="16" y="505" width="288" height="45"/>
+                                                        <rect key="frame" x="16" y="545" width="288" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m37-Ls-RoA">
-                                                        <rect key="frame" x="16" y="550" width="288" height="210"/>
+                                                        <rect key="frame" x="16" y="590" width="288" height="250"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectsCell" rowHeight="60" id="FKh-XQ-zhR" customClass="ProjectsTableViewCell" customModule="swiftyCompanion" customModuleProvider="target">
@@ -296,7 +296,7 @@
                                                         </connections>
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-ob-Hqz">
-                                                        <rect key="frame" x="40" y="760" width="240" height="15"/>
+                                                        <rect key="frame" x="40" y="840" width="240" height="15"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="Bl9-yH-OBd"/>
