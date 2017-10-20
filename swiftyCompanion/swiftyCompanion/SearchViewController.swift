@@ -33,10 +33,10 @@ class SearchViewController: UIViewController, HandleAccesToken {
     
     @IBOutlet weak var searchLoginTextField: UITextField!
     @IBOutlet weak var searchLoginButton: UIButton!
-    
+
     var user: User? {
         didSet {
-            self.prepareForScrollView()
+            DispatchQueue.main.async { self.prepareForScrollView() }
         }
     }
     

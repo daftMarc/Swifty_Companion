@@ -45,13 +45,15 @@ class GetUserInformations {
                     _ = GetAccessToken(delegate: SearchViewController(), login: login)
                     return
                 default:
-                    self.delegate?.displayServerError()
+                    DispatchQueue.main.async { self.delegate?.displayServerError() }
                 }
             }
             if let result = response.result.value {
                 let json = JSON(result)
                 if let id = json[0]["id"].int { self.getUserInformations(login, id) }
-                else { self.delegate?.displayNoResultError(login: login) }
+                else {
+                    DispatchQueue.main.async { self.delegate?.displayNoResultError(login: login) }
+                }
             }
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
@@ -80,7 +82,7 @@ class GetUserInformations {
                     UserDefaults.standard.set(nil, forKey: Constants.accessToken)
                     _ = GetAccessToken(delegate: SearchViewController(), login: login)
                 default:
-                    self.delegate?.displayServerError()
+                    DispatchQueue.main.async { self.delegate?.displayServerError() }
                 }
             }
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -123,9 +125,7 @@ class GetUserInformations {
         }
         
         print(user)
-        DispatchQueue.main.async {
-            self.delegate?.user = user
-        }
+        self.delegate?.user = user
     }
     
 }

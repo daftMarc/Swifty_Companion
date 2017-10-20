@@ -42,7 +42,7 @@ class GetAccessToken {
                 }
             }
             if let code = response.response?.statusCode, code != 200 {
-                self.delegate?.displayServerError()
+                DispatchQueue.main.async { self.delegate?.displayServerError() }
             }
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
