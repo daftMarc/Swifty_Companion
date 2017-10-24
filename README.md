@@ -1,4 +1,4 @@
-# Swifty Companion
+# Swifty Companion - 42School's project - 125/100
 
 <br/>
 <div align="center">
