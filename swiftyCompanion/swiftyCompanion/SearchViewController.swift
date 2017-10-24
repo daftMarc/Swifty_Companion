@@ -14,6 +14,13 @@ protocol HandleAccesToken {
 
 class SearchViewController: UIViewController, HandleAccesToken {
     
+    @IBAction func resetAccessToken(_ sender: UIButton) {
+        // Simulate expired token
+        UserDefaults.standard.set("foo", forKey: Constants.accessToken)
+        
+        // Simulate nonexistent token
+//        UserDefaults.standard.set(nil, forKey: Constants.accessToken)
+    }
     
     @IBAction func searchLoginAction(_ sender: UIButton) {
         self.searchLoginButton.isEnabled = false

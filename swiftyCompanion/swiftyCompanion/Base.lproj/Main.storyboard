@@ -52,11 +52,22 @@
                                     <constraint firstAttribute="width" constant="230" id="mIl-xz-Lxj"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-G6-rpr">
+                                <rect key="frame" x="16" y="518" width="133" height="30"/>
+                                <state key="normal" title="Reset access token">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KqU-os-IqJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wUl-G6-rpr" secondAttribute="bottom" constant="20" symbolic="YES" id="5W6-jZ-mD9"/>
                             <constraint firstItem="A9H-T1-FWL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KBa-eF-uss"/>
                             <constraint firstItem="AJb-Mk-6HS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDC-rR-p5K"/>
+                            <constraint firstItem="wUl-G6-rpr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bQS-go-EaY"/>
                             <constraint firstItem="A9H-T1-FWL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="e8h-H9-bUK"/>
                             <constraint firstItem="A9H-T1-FWL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="egN-BT-UHU"/>
                             <constraint firstItem="A9H-T1-FWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fb8-jj-MaF"/>
